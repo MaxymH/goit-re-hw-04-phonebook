@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.input{
+    margin-top: 10px;
+    border: 0.5px gray solid;
+    width: 150px;
+}
