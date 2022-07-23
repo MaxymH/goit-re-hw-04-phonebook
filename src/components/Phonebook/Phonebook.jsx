@@ -17,7 +17,7 @@ const Phonebook = () => {
 
     useEffect(() => {
     const contacts = localStorage.getItem('contacts')
-            if (!contacts || contacts === '') {
+            if (!contacts || contacts.length === 0) {
                 return
             } else {
                 const parseContacts = JSON.parse(contacts)
