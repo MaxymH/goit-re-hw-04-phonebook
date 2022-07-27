@@ -16,15 +16,11 @@ const Phonebook = () => {
     const [filter, setFilter] = useState('')
 
     useEffect(() => {
-    const contacts = localStorage.getItem('contacts')
-            if (!contacts || contacts.length === 0) {
-                return
-            } else {
-                const parseContacts = JSON.parse(contacts)
-        setContacts(
-            parseContacts
-        )
-            }
+        const contacts = localStorage.getItem('contacts');
+            const parseContacts = JSON.parse(contacts);
+        if (parseContacts?.length) {
+            setContacts(parseContacts)
+        }
     }, [])
             
     useEffect(() => {
